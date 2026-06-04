@@ -1,12 +1,11 @@
 # $env:BASE_URL = "/starterkit"
 version: 1
 project:
-  title: TU Delft's JB Starterkit
+  title: Default Decision Tree
   # description:
-  keywords: [Jupyter Book, Open Science, TU Delft, Starterkit]
+  keywords: [Machine Learning, Supervised Learning, Decsion Tree, Classification Tree, Regression Tree, Gini Impurity, Entropy, Information Gain]
 
-  github: https://github.com/TUD-JB-OS/starterkit # change this to your own repository
-  date: 2026-01-31
+  github: ttps://tckoanh.github.io/Default-Decision-Tree/
   thumbnail: style/thumbnail.jpg
   numbering: 
     title: true
@@ -34,7 +33,6 @@ project:
 
   plugins:
     - https://github.com/jupyter-book/myst-plugins/releases/download/iframe-to-qr-pdf/iframe-to-qr-pdf.mjs\
-    - plugins/page-last-updated.mjs
     - plugins/typst_conversion-support.mjs
     - plugins/lightbox.mjs
     
