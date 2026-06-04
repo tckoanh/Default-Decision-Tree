@@ -1,5 +1,5 @@
 ---
-title: The TUD starterkit for open publishing with JupyterBook
+title: Multi-modality Decision Tree
 site:
   hide_outline: true
   hide_toc: true
@@ -15,18 +15,27 @@ no-update-date: true
 
 +++ { "kind": "split-image" }
 
-## The TUD starterkit for open publishing with JupyterBook
+## Learning Decision Trees through different modalities
+This is a tutorial for learning Decision Trees, created as part of a Bachelor’s thesis for the CSE3000 Research Project course of the Faculty of Electrical Engineering, Mathematics and Computer Science (EEMCS) at Delft University of Technology.
 
-a quick setup for your open publishing project.
+It is intended as an open educational resource that introduces first-year Computer Science students to the core principles of Decision Trees. The tutorial assumes no prior background in Machine Learning.
 
-{button}`Use this template <https://github.com/new?template_name=starterkit&template_owner=TUD-JB-OS>`  
-
-Originally created by  
+This Jupyter Notebook template was originally created by  
 *Freek Pols*
 
-![](figures/cover.png)
+![](figures/background.jpg)
 
 +++
 
-This thesis reports on the use of Jupyter Book for open publishing at TU Delft - especially bachelor and master thesis. It provides a quick setup for your open publishing project, including a template and guidelines for using Jupyter Book effectively. The starterkit is designed to help you create and share your research in an open and accessible way.
+### Learning objectives:
+After completing this tutorial, you should be able to:
+1. Explain the purpose of a Decision Tree classifier and describe its role in supervised Machine Learning.
+2. Understand how a dataset is recursively partitioned into smaller regions during tree construction.
+3. Understand the concepts of node, branch, leaf node, and prediction within a Decision Tree.
+4. Explain how splitting criteria are computed using Gini impurity, Entropy and Information gain.
+5. Apply Decision Tree concepts to simple two-dimensional classification problems.
 
+### About this tutorial:
+It is aimed to explain topics in Decision Trees as simplest and most intuitive as possible, using instructional tools such as analogies, figures, interactive widgets, and worked examples to help students better understand the concepts as well as mathematical formulas in Decision Trees.
+
+The first chapter serves as a refresher to Logarithms and Probability to subsequent materials, you may skip this section if you are already comfortable with these topics.
