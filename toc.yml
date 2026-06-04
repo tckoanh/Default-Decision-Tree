@@ -2,13 +2,12 @@ version: 1
 project:
   toc:
     - file: content/Index.md
-    - file: content/Introduction.md
     - file: content/Theory.md
-    - file: content/Methods.md
-    - file: content/Results.ipynb
-    - file: content/Conclusion.md
-    - title: Appendix
       children:
-        - file: content/Cheatsheet.md
-        - file: errorlog.md
-        - file: README.md
+        - file: content/Logarithms.md
+        - file: content/Probability.md
+    - file: content/ML-Overview.md
+    - file: content/Introduction.md
+    - file: content/Build.ipynb
+    - file: content/Methods.ipynb
+    - file: content/Conclusion.md
