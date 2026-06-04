@@ -1,44 +1,41 @@
 ---
 abstract: |
-    In this demo, we demonstrate how Jupyter Book can be used to create and publish a content rich paper that includes 
-    interactive elements such as code cells, visualizations, and multimedia. We will walk through the process of setting 
-    up a Jupyter Book, adding content, and deploying the final product online.
+    Decision Tree is a commonly used algorithm in **Supervised Learning**, for both **Classification** and **Regression** tasks. It has the shape of a flowchart, each branch represents a question, and depends on your answer, you move on to the next step. It breaks downs complex datasets into more easy-to-interpret structures.
 ---
 
-# Introduction
+# Introduction to Decision Tree
 
-Jupyter Book has been rebuild from ground up using the MyST engine [@doi:10.25080/hwcj9957]. This allows to export content in multiple output formats including HTML, PDF and docx. In this paper we present an overview of the possibilities and demonstrate its working.
+Decision trees are fundamental machine learning models and also serve as building blocks for more advanced methods such as **Random Forests** and **Gradient Boosting Machines**.
 
-In an introduction. you often cite. Than can be done in various ways, either using a .bib file or directly using the doi.
+## Structure of a Tree
+A tree data structure, much like a real tree, grows from a root node and expands into multiple branches, with leaves at the ends.
+- The root, unlike in nature, is positioned at the top and is considered an internal node. 
+- Branches (internal nodes) have both incoming and outgoing edges, while leaves (external nodes) only have incoming edges.
+- Any two nodes connected by an edge have a parent–child relationship, with the edge pointing from the parent to the child.
+- Nodes that share the same parent are called siblings.
+- Tree depth: the number of edges from the root node to its furthest leaf.
 
-**cite with doi**
-- `[@doi:10.25080/hwcj9957]` resulting in [@doi:10.25080/hwcj9957]
-- `@doi:10.25080/hwcj9957` resulting in @doi:10.25080/hwcj9957
+## What is a Decision Tree?
+A decision tree is a flow chart that helps make decisions by asking a series of simple questions, it is used for both Classification and Regression tasks. What this simply means is that it can be used to predict categorical data (like Dog or Cat), but it can also be used to predict a number (like housing prices). These 2 tasks essentially have the same structure, but with different output.
 
-**cite from bib-file**
-- `{cite:t}`jupyter2025`` resulting in {cite:t}`jupyter2025`
-- `{cite:p}`jupyter2025`` resulting in {cite:p}`jupyter2025`
+Below is an example of a Decision Tree used for Classification, helping you decide which mode of transportation to take today. As shown in the figure, there are 4 things notable here:
+- Each internal node must have at least 2 children
+- The same tree can have mixed data types: numerical data and categorical data.
+- Numerical thresholds can be different for the same data.
+- Final outcome can be repeated.
 
+**Note**: Although categorical data in Decision Trees can include more than two classes, the following chapters will focus only on binary (two-class) cases for simplicity.
 
-## Background
-Jupyter Book has been rebuild with the intend to export content in multiple output formats including HTML, PDF and docx. {numref}`Figure {number} <fig-diagram>` provides this idea.
+![alt text](figures/tree_structure.png)
 
-```{figure} figures/diagram.*
-:label: fig-diagram
-:alt: Some figure
+## How does a Decision Tree work?
+Think of it like a guessing game, and if you've ever played this game before, you'll know that the smartest approach is **NOT** to begin with any specific guess but rather a question that cuts the possibilities in half. 
 
-The myst engine allows Jupyter Notebook, markdown and even tex files to be converted to multiple output formats.
-```
+For example, if I ask you to guess a famous person I’m thinking of, a question like “Are they a woman?” eliminates far more options than something specific like “Is it Michael Jackson?”.
 
-As exporting to different formats is possible, it is not always desired. Some content should only be visible in the HTML version, and some content only need to be included in the PDF version. You can use blocks like `+++{"no-pdf":true}` to enable this, as shown below where the figure is seen in the HTML version but not in the PDF version.
+Similarly, when building a Decision Tree, each branch should choose a question that would give it the most information possible, using the data it already has. This way, you'll able to reach the answer much faster.
 
-+++{"no-pdf":true}
-```{figure} figures/delft.*
-:label: fig-delft
-:alt: picture of the TUD
+### How do we pick the smartest question for each branch?
+The tree is basically an optimizer. It tries different features and thresholds, then eventually picks the question that reduces the most **uncertainty**. This is usually mathematically measured using criteria like **Gini impurity**, **Entropy and Information gain**.
 
-A figure that is in the website but not in the PDF version.
-```
-+++
-
-Moreover, sometimes you want to have content [only showing up](xref:myst-guide/creating-pdf-documents#including-content-with-specific-exports) in the pdf, if you use Typst you can use of a block `+++{raw:typst}` and for LaTeX `+++{raw:latex}`. 
+A much deeper dive on these criteria will be discussed in our next chapter.
