@@ -3,7 +3,23 @@ Humans acquire knowledge about the world around them through past experiences, w
 
 Machine Learning is commonly divided into three main categories: Supervised Learning, Unsupervised Learning, and Reinforcement Learning, each serves a different purpose and/or task.
 
-![alt text](figures/MLoverview.png)
+### Supervised Learning
+The algorithm learns from labeled data — each training example comes with an input and the correct output (a label).
+The goal is to learn a mapping from inputs to outputs so the model can predict labels for new, unseen data.
+
+Examples: Classification (e.g., loan approved vs. rejected), Regression (e.g., predicting house prices).
+
+### Unsupervised Learning
+The algorithm works with unlabeled data — no correct answers are given. The goal is to discover hidden patterns, structures, or groupings within the data on its own.
+
+Examples: Clustering customers into segments, reducing data dimensions with PCA, finding unusual patterns (anomaly detection).
+
+### Reinforcement Learning
+The algorithm learns by interacting with an environment through trial and error. It receives rewards or penalties for its actions and learns a strategy (policy) to maximize cumulative reward over time.
+
+Examples: Game-playing AI (AlphaGo, chess engines), robotics, autonomous driving, recommendation systems.
+
+---
 
 ## Model Training, Testing, and Generalization
 When building a machine learning model, we split our data into two main parts: training data and testing data.
@@ -57,8 +73,3 @@ A good model:
 - Performs well on testing data
 
 It captures the true patterns without memorizing noise.
-
----
-A visulization of what Underfitting and Overfiiting can look like. Source: @analystprep_overfitting_cfa_l2
-
-![alt text](figures/under_over_fit.jpg)
