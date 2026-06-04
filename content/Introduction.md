@@ -26,7 +26,7 @@ Below is an example of a Decision Tree used for Classification, helping you deci
 
 **Note**: Although categorical data in Decision Trees can include more than two classes, the following chapters will focus only on binary (two-class) cases for simplicity.
 
-![alt text](figures/tree_structure.png)
+![alt text](figures/tree_structure_static.png)
 
 ## How does a Decision Tree work?
 Think of it like a guessing game, and if you've ever played this game before, you'll know that the smartest approach is **NOT** to begin with any specific guess but rather a question that cuts the possibilities in half. 
